@@ -1,8 +1,8 @@
 <!-- give your channel type a title -->
-### Private Message
+# Private Message
 
 <!-- specify the channel type -->
-> #### net.app.core.pm
+> ### net.app.core.pm
 
 <!-- provide a description for this channel type's behavior -->
 This channel type is for private messages between 2 or more people. As a core Channel type, it has some special restrictions designed to simplify adoption for developers. 
