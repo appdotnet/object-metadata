@@ -1,32 +1,30 @@
-# App.net Annotations Repository 
+# App.net Object Metadata
 
-Annotations are metadata that can be attached to various objects in the App.net system. They allow developers to add additional information to App.net objects outside of the fields App.net has already defined. For more information on the definition and usage of annotations, please [browse the annotations documentation](http://developers.app.net/docs/meta/annotations/).
+Many of the objects used by the App.net API can be enhanced by third party developers through the use of special metadata. Users, Posts, Channels and Messages can be augmented using [annotations](http://developers.app.net/docs/meta/annotations/), and Channels can be additionally augmented using [channel types](http://developers.app.net/docs/resources/channel/#channel-types).
 
-### Purpose
-
-This repository serves to document active annotations in the ecosystem and to encourage collaboration between third party developers in defining new and refining existing annotations.
+This repository serves to document metadata formats in the ecosystem and to encourage collaboration between third party developers in defining new and refining existing metadata formats.
 
 ### What's here
 
-The annotations folder contains a single documentation file in Markdown format for each annotation that has been submitted to the repository. These files are arranged alphabetically but otherwise are unordered / uncategorized. We'll be examining options for further organizing annotations as the pool of entries expands.
+The annotations and channel-types folders contains a single documentation file in Markdown format for each annotation / channel-type that has been submitted to the repository. These files are arranged alphabetically but otherwise are unordered / uncategorized. We'll be examining options for further organizing these as the pool of entries expands.
 
-### Adding new annotations 
+### Adding new entries
 
-To submit a new annotation, take the following steps:
+To submit a new entry, take the following steps:
 
 * [Fork this repository](https://help.github.com/articles/fork-a-repo)
-* In your fork, create a new Markdown file in the annotations directory with a name matching the "type" for your annotation. You should base this file off [net.app.sample.annotation.md](annotations/blob/master/net.app.sample.annotation.md). _Note: while the App.net API does not prevent unrelated annotations from declaring the same "type", any **new** annotation you submit here should not match an existing entry._
-* Commit your changes and [submit a pull request](https://help.github.com/articles/using-pull-requests) for the new file. All valid annotations will be accepted, but we ask that you focus on submitting annotations that are useful candidates for other developers to utilize.
+* In your fork, create a new Markdown file in the appropriate directory with a name matching the "type" for your metadata. For annotations, you can view the raw text for the [crosspost annotation](https://raw.github.com/appdotnet/object-metadata/master/annotations/net.app.core.crosspost.md) as a formatting guide. For channel types you can view the raw text for the [pm channel](https://raw.github.com/appdotnet/object-metadata/master/channel-types/net.app.core.pm.md).  _Note: while the App.net API does not prevent multiple annotations / channels types from declaring the same "type", any **new** entry you submit here should not conflict with an existing entry._
+* Commit your changes and [submit a pull request](https://help.github.com/articles/using-pull-requests) for the new file. All structurally valid entries will be accepted, but we ask that you focus on submitting annotations that are useful candidates for other developers to utilize.
 
-### Modifying existing annotations
+### Modifying existing entries
 
-To modify an existing annotation, you should perform the same steps as above as necessary, committing your updates and submitting a pull request. 
+To modify an existing entry, you should perform the same steps as above as necessary, committing your updates and submitting a pull request. 
 
-Anyone can issue a pull request for changes to any annotation. However, all requests will be approved (merged) by App.net staff in consultation with existing maintainers specified in the relevant annotation.
+Anyone can issue a pull request for changes to any entry. However, all requests will be approved (merged) by App.net staff in consultation with the existing maintainers specified in the current entry.
 
-### Collaborating on annotations
+### Collaborating
 
-One of our goals for creating this repository is to foster more developer collaboration on annotations. We hope developers make extensive use of the [annotations issue tracker](annotations/issues) for this purpose. The issue tracker is also a good place to discuss how we can make the annotation documenting process better!
+One of our goals for creating this repository is to foster more developer collaboration. We hope developers make extensive use of the [object metadata issue tracker](object-metadata/issues) for this purpose. The issue tracker is also a good place to discuss how we can make this documentation process better!
 
 ### Your host
 
