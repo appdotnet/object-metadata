@@ -61,7 +61,7 @@ Valid list of presence codes.
 
 ## Notes  
 
-A standard [XMPP presence stanza] (http://tools.ietf.org/html/rfc6121#section-4.7) can be generated from this spec.
+A standard [XMPP presence stanza](http://tools.ietf.org/html/rfc6121#section-4.7) can be generated from this spec.
 
 The XMPP 'type' attribute can be derived from the presence code.  All of the standard 'show' codes are borrowed from XMPP except 'chat' -- which can be assumed in the 'available' code.  The 'show' attribute has been changed to 'code' for clarity.
 

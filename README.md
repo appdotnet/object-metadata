@@ -1,12 +1,12 @@
 # App.net Object Metadata
 
-Many of the objects used by the App.net API can be enhanced by third party developers through the use of special metadata. Users, Posts, Channels and Messages can be augmented using [annotations](http://developers.app.net/docs/meta/annotations/), and Channels can be additionally augmented using [channel types](http://developers.app.net/docs/resources/channel/#channel-types).
+Many of the objects used by the App.net API can be enhanced by third party developers through the use of special metadata. Users, Posts, Channels and Messages can be augmented using [annotations](http://developers.app.net/docs/meta/annotations/), and Channels can be additionally augmented using [channel types](http://developers.app.net/docs/resources/channel/#channel-types). Annotations can be dynamically altered using [annotation replacement values](http://developers.app.net/docs/meta/annotations/#annotation-replacement-values)
 
 This repository serves to document metadata formats in the ecosystem and to encourage collaboration between third party developers in defining new and refining existing metadata formats.
 
 ### What's here
 
-The annotations and channel-types folders contains a single documentation file in Markdown format for each annotation / channel-type that has been submitted to the repository. These files are arranged alphabetically but otherwise are unordered / uncategorized. We'll be examining options for further organizing these as the pool of entries expands.
+The annotations, annotation-replacement-values, and channel-types folders contains a single documentation file in Markdown format for each metadata standard that has been submitted to the repository. These files are arranged alphabetically but otherwise are unordered / uncategorized. We'll be examining options for further organizing these as the pool of entries expands.
 
 ### Adding new entries
 
@@ -28,4 +28,4 @@ One of our goals for creating this repository is to foster more developer collab
 
 ### Your host
 
-This repository is maintained by [@orian](https://alpha.app.net/orian), App.net's Developer Advocate. 
+This repository is maintained by [@orian](https://alpha.app.net/orian), App.net's Developer Advocate.
