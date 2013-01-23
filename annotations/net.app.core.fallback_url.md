@@ -1,5 +1,3 @@
-## _Note: this annotation is not yet live as a validated core annotation_  ##
-
 <!-- give your annotation a title -->
 # Fallback URL
 
