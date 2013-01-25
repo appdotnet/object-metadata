@@ -41,11 +41,13 @@ This dynamically inserts information about a list of App.net files into an annot
                 "file_token": "new_file_token",
                 "file_id": "1"
                 "url": "http://example.com/file1.png",
+                "url_expires": "2013-01-25T03:00:00Z"
             },
             {
                 "file_token": "new_file_token",
                 "file_id": "2"
                 "url": "http://example.com/file2.png",
+                "url_expires": "2013-01-25T03:00:00Z"
             }
         ],
         "other_values": "are preserved"

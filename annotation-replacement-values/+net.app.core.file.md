@@ -33,7 +33,8 @@ This dynamically inserts information about an App.net file into an annotation. T
     "value": {
         "file_token": "new_file_token",
         "file_id": "1",
-        "url": "http://example.com/file_url.png"
+        "url": "http://example.com/file_url.png",
+        "url_expires": "2013-01-25T03:00:00Z",
         "other_values": "are preserved"
     }
 }
@@ -67,7 +68,7 @@ This dynamically inserts information about an App.net file into an annotation. T
         "file_token": "new_file_token",
         "file_id": "1",
         "complete": true,
-        "mime_type": "image/png"
+        "mime_type": "image/png",
         ...other File object values...
         "other_values": "are preserved"
     }
@@ -101,6 +102,7 @@ This dynamically inserts information about an App.net file into an annotation. T
     "value": {
         "file_token": "new_file_token",
         "file_id": "1",
+        "url_expires": "2018-01-01T00:00:00Z",
         "version": "1.0",
         "type": "photo",
         ...other oembed values...
