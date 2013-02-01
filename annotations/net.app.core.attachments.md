@@ -32,7 +32,7 @@ Attach App.net files to this resource.
 {
     "type": "net.app.core.attachments",
     "value": {
-        "+net.app.core.file_list": [
+        "net.app.core.file_list": [
             {
                 "file_token": "new_file_token",
                 "file_id": "1",

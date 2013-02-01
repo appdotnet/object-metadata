@@ -1,7 +1,7 @@
-# File
+# File List
 
 <!-- specify the "key" for the replacement value -->
-> ### +net.app.core.file_list_
+> ### +net.app.core.file_list
 
 <!-- provide a description of the replacement value -->
 This dynamically inserts information about a list of App.net files into an annotation.
