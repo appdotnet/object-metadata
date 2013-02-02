@@ -5,7 +5,7 @@
 > ### net.app.core.attachments
 
 <!-- provide a description of what your annotation represents -->
-Attach App.net files to this resource.
+Attach App.net [Files](http://developers.app.net/docs/resources/file/) to this resource.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -50,7 +50,7 @@ Attach App.net files to this resource.
 
 | Field | Required? | Type | Description |
 | ----- | --------- | ---- | ----------- |
-| `+net.app.core.file_list` | Required | list | A list that matches the [+net.app.core.file_list](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.file_list.md) validations. For this annotation, the only `format` allowed is `metadata`|
+| `+net.app.core.file_list` | Required | list | A list that matches the [+net.app.core.file_list](../annotation-replacement-values/+net.app.core.file_list.md) validations. For this annotation, the only `format` allowed is `metadata`|
 
 <!-- provide a way to contact you -->
 ## Maintainers
@@ -61,4 +61,6 @@ Attach App.net files to this resource.
 
 <!-- provide references to related annotations -->
 ## Related annotations
-* [+net.app.core.file](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.file.md)* [+net.app.core.file_list](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.file_list.md)
+* [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md)
+* [+net.app.core.file_list](../annotation-replacement-values/+net.app.core.file_list.md)
+* [net.app.core.oembed](net.app.core.oembed.md)

@@ -4,7 +4,7 @@
 > ### +net.app.core.file
 
 <!-- provide a description of the replacement value -->
-This dynamically inserts information about an App.net file into an annotation. The File information is merged with any other values to form a single object.
+This dynamically inserts information about an App.net [File](http://developers.app.net/docs/resources/file/) into an annotation. The File information is merged with any other values to form a single object.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -126,10 +126,11 @@ This dynamically inserts information about an App.net file into an annotation. T
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+* [Alpha](https://alpha.app.net/)
+* [Omega](https://omega.app.net/)
 
 <!-- provide references to related annotations -->
 ## Related annotations
-
-* [net.app.core.attachments](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.attachments.md)
-* [net.app.core.oembed](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.oembed.md)
-* [+net.app.core.file_list](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.file_list.md)
+* [+net.app.core.file_list](+net.app.core.file_list.md)
+* [net.app.core.attachments](../annotations/net.app.core.attachments.md)
+* [net.app.core.oembed](../annotations/net.app.core.oembed.md)
