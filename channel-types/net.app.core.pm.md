@@ -18,6 +18,7 @@ In addition, this channel type differs from others in that it is designed to pro
 <!-- provide references to compatible apps / service -->
 ## Used by 
 * [Omega](https://omega.app.net/)
+* [Patter](http://patter-app.net)
 
 <!-- provide references to related entries -->
 ## Related entries
