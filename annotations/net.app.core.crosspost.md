@@ -33,6 +33,8 @@ The crosspost annotation is meant to specify the original or canonical source of
 <!-- provide references to compatible apps / service -->
 ## Used by
 * [Alpha](https://alpha.app.net)
+* [Patter](http://patter-app.net)
+* [Blog for app.net](http://blog-app.net)
 
 <!-- provide references to related annotations -->
 ## Related annotations
