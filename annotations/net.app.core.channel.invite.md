@@ -38,3 +38,6 @@ Channel creators should consider providing [fallback url annotations](net.app.co
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+
+* [Patter](http://patter-app.net)
+* [Blog for app.net](http://blog-app.net)
