@@ -47,7 +47,7 @@ This dynamically inserts information about an App.net [File](http://developers.a
 
 ~~~ js
 {
-    "type": "com.example.test", # also works with the net.app.core.oembed annotation
+    "type": "com.example.test",
     "value": {
         "+net.app.core.file": {
             "file_token": "12345abcde",
@@ -78,11 +78,13 @@ This dynamically inserts information about an App.net [File](http://developers.a
 
 ### `oembed` format
 
+This format can only be used with the `net.app.core.oembed` annotation, not with 3rd party annotations.
+
 #### Provided to App.net
 
 ~~~ js
 {
-    "type": "com.example.test", # also works with the net.app.core.oembed annotation
+    "type": "net.app.core.oembed",
     "value": {
         "+net.app.core.file": {
             "file_token": "12345abcde",
