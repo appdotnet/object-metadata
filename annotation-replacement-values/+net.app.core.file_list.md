@@ -38,13 +38,13 @@ This dynamically inserts information about a list of App.net [Files](http://deve
     "value": {
         "net.app.core.file_list": [
             {
-                "file_token": "new_file_token",
+                "file_token_read": "read file_token",
                 "file_id": "1"
                 "url": "http://example.com/file1.png",
                 "url_expires": "2013-01-25T03:00:00Z"
             },
             {
-                "file_token": "new_file_token",
+                "file_token_read": "read file_token",
                 "file_id": "2"
                 "url": "http://example.com/file2.png",
                 "url_expires": "2013-01-25T03:00:00Z"

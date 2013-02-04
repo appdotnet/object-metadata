@@ -34,7 +34,7 @@ Attach App.net [Files](http://developers.app.net/docs/resources/file/) to this r
     "value": {
         "+net.app.core.file_list": [
             {
-                "file_token": "new_file_token",
+                "file_token_read": "new_file_token",
                 "file_id": "1",
                 "complete": true,
                 "mime_type": "image/png"

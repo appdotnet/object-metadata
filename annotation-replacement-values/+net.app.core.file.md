@@ -31,7 +31,7 @@ This dynamically inserts information about an App.net [File](http://developers.a
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
         "url": "http://example.com/file_url.png",
         "url_expires": "2013-01-25T03:00:00Z",
@@ -65,7 +65,7 @@ This dynamically inserts information about an App.net [File](http://developers.a
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
         "complete": true,
         "mime_type": "image/png",
@@ -102,9 +102,10 @@ This format can only be used with the `net.app.core.oembed` annotation, not with
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
-        "url_expires": "2018-01-01T00:00:00Z",
+        "url_immediate": "https://...",
+        "url_immediate_expires": "2012-01-01T01:00:00Z",
         "version": "1.0",
         "type": "photo",
         ...other oembed values...
@@ -112,6 +113,12 @@ This format can only be used with the `net.app.core.oembed` annotation, not with
     }
 }
 ~~~
+
+#### URL Lifetimes
+
+Note that some extra fields are returned from the API depending on whether the parent object is public or not. For content that is public, like posts, messages in public channels, annotations on user objects, etc., we include a URL in the `url` field which will redirect you to the content in question so long as it is still public; we also include `url_immediate` and `url_immediate_expires` fields if you wish to avoid the extra HTTP request. URLs returned in the `url_immediate` field are good for at least 1 hour after fetching the object from the App.net API.
+
+For private content, we return a short-lived URL in the `url` field and a `url_expires` parameter. URLs returned in this field are good for at least 1 hour after fetching the object from the App.net API.
 
 <!-- provide a complete description of the fields in the "value" object for your annotation -->
 ## Fields
