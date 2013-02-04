@@ -118,6 +118,9 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+* [Patter](http://patter-app.net)
+* [Share](http://share-app.net)
+* [Vidcast](http://vidcast-app.net)
 * [Alpha](https://alpha.app.net/)
 
 <!-- provide references to related annotations -->
