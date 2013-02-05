@@ -38,3 +38,5 @@ One use case for this annotation is as a [Channel](http://developers.app.net/doc
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+
+* [Patter](http://patter-app.net)

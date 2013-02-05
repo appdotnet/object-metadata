@@ -4,7 +4,7 @@
 > ### +net.app.core.file
 
 <!-- provide a description of the replacement value -->
-This dynamically inserts information about an App.net file into an annotation. The File information is merged with any other values to form a single object.
+This dynamically inserts information about an App.net [File](http://developers.app.net/docs/resources/file/) into an annotation. The File information is merged with any other values to form a single object.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -31,7 +31,7 @@ This dynamically inserts information about an App.net file into an annotation. T
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
         "url": "http://example.com/file_url.png",
         "url_expires": "2013-01-25T03:00:00Z",
@@ -47,7 +47,7 @@ This dynamically inserts information about an App.net file into an annotation. T
 
 ~~~ js
 {
-    "type": "com.example.test", # also works with the net.app.core.oembed annotation
+    "type": "com.example.test",
     "value": {
         "+net.app.core.file": {
             "file_token": "12345abcde",
@@ -65,7 +65,7 @@ This dynamically inserts information about an App.net file into an annotation. T
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
         "complete": true,
         "mime_type": "image/png",
@@ -78,11 +78,13 @@ This dynamically inserts information about an App.net file into an annotation. T
 
 ### `oembed` format
 
+This format can only be used with the `net.app.core.oembed` annotation, not with 3rd party annotations.
+
 #### Provided to App.net
 
 ~~~ js
 {
-    "type": "com.example.test", # also works with the net.app.core.oembed annotation
+    "type": "net.app.core.oembed",
     "value": {
         "+net.app.core.file": {
             "file_token": "12345abcde",
@@ -100,9 +102,10 @@ This dynamically inserts information about an App.net file into an annotation. T
 {
     "type": "com.example.test",
     "value": {
-        "file_token": "new_file_token",
+        "file_token_read": "new_file_token",
         "file_id": "1",
-        "url_expires": "2018-01-01T00:00:00Z",
+        "url_immediate": "https://...",
+        "url_immediate_expires": "2012-01-01T01:00:00Z",
         "version": "1.0",
         "type": "photo",
         ...other oembed values...
@@ -110,6 +113,12 @@ This dynamically inserts information about an App.net file into an annotation. T
     }
 }
 ~~~
+
+#### URL Lifetimes
+
+Note that some extra fields are returned from the API depending on whether the parent object is public or not. For content that is public, like posts, messages in public channels, annotations on user objects, etc., we include a URL in the `url` field which will redirect you to the content in question so long as it is still public; we also include `url_immediate` and `url_immediate_expires` fields if you wish to avoid the extra HTTP request. URLs returned in the `url_immediate` field are good for at least 1 hour after fetching the object from the App.net API.
+
+For private content, we return a short-lived URL in the `url` field and a `url_expires` parameter. URLs returned in this field are good for at least 1 hour after fetching the object from the App.net API.
 
 <!-- provide a complete description of the fields in the "value" object for your annotation -->
 ## Fields
@@ -126,10 +135,11 @@ This dynamically inserts information about an App.net file into an annotation. T
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+* [Alpha](https://alpha.app.net/)
+* [Omega](https://omega.app.net/)
 
 <!-- provide references to related annotations -->
 ## Related annotations
-
-* [net.app.core.attachments](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.attachments.md)
-* [net.app.core.oembed](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.oembed.md)
-* [+net.app.core.file_list](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.file_list.md)
+* [+net.app.core.file_list](+net.app.core.file_list.md)
+* [net.app.core.attachments](../annotations/net.app.core.attachments.md)
+* [net.app.core.oembed](../annotations/net.app.core.oembed.md)

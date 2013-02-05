@@ -118,6 +118,12 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+* [Alpha](https://alpha.app.net/)
+* [Patter](http://patter-app.net)
+* [Vidcast](http://vidcast-app.net)
 
 <!-- provide references to related annotations -->
 ## Related annotations
+* [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md)
+* [+net.app.core.file_list](../annotation-replacement-values/+net.app.core.file_list.md)
+* [net.app.core.attachments](net.app.core.attachments.md)
