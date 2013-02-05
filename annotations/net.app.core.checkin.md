@@ -45,7 +45,6 @@ Indicates that a user has "checked in" to a Place as part of creating a resource
         "categories": [
             {
                 "labels": [
-                    "Factual Places",
                     "Retail",
                     "Bookstores"
                 ],

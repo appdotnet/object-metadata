@@ -46,7 +46,6 @@ Because it is possible for duplicate entries to exist for the same Place, Factua
         "categories": [
             {
                 "labels": [
-                    "Factual Places",
                     "Social",
                     "Food and Dining",
                     "Restaurants"
