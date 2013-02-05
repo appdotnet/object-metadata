@@ -6,6 +6,10 @@
 <!-- provide a description of the replacement value -->
 This dynamically inserts information about a Place object into an annotation. The Place information is merged with any other values to form a single object.
 
+### Deduplication effects
+
+Because it is possible for duplicate entries to exist for the same Place, Factual provides a method to deduplicate one Place object by "replacing" it with another. As a result, you may notice sometimes that when you have stored a Place with one `factual_id` that you will later see an entry with a different `factual_id`. When we replace a `+net.app.core.place` in this way, we claim that it is equivalent to the one requested.
+
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
 
