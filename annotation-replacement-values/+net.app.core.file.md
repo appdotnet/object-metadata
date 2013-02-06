@@ -114,6 +114,12 @@ This format can only be used with the `net.app.core.oembed` annotation, not with
 }
 ~~~
 
+In addition to the standard oembed fields, App.net will also add fields for `file_token_read` and `file_id` to the OEmbed data. If the OEmbed data is not public, the OEmbed `url` field will expire at the time indicated in `url_expires`.
+
+If the OEmbed data is public, `url` will be a permanent url which always redirects to the image. In this case, an additional field `url_immediate` will provide the current value for the file so you can avoid the redirect. (This expires at `url_immediate_expires`). `thumbnail_url` and `thumbnail_large_url` (described below) also use this same url patterns.
+
+We generate `thumbnail_url` from the [`image_thumb_200s` derived file](http://developers.app.net/docs/resources/file/#derived-files). If the image is smaller than 200x200, then we use the image as its own thumbnail. If we have a larger derived file (`image_thumb_960r`), then we will also include `thumbnail_large_url`, `thumbnail_large_width`, `thumbnail_large_height`, etc that correspond to the larger thumbnail.
+
 #### URL Lifetimes
 
 Note that some extra fields are returned from the API depending on whether the parent object is public or not. For content that is public, like posts, messages in public channels, annotations on user objects, etc., we include a URL in the `url` field which will redirect you to the content in question so long as it is still public; we also include `url_immediate` and `url_immediate_expires` fields if you wish to avoid the extra HTTP request. URLs returned in the `url_immediate` field are good for at least 1 hour after fetching the object from the App.net API.
