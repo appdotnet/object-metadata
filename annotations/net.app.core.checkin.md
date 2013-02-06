@@ -60,7 +60,7 @@ Indicates that a user has "checked in" to a Place as part of creating a resource
 
 | Field | Required? | Type | Description |
 | ----- | --------- | ---- | ----------- |
-| `+net.app.core.place` | Required | object | An object that matches the [+net.app.core.place](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.place.md) validations (contains a valid `factual_id`.|
+| `+net.app.core.place` | Required | object | An object that matches the [+net.app.core.place](https://github.com/appdotnet/object-metadata/blob/master/annotation-replacement-values/+net.app.core.place.md) validations (contains a valid `factual_id`).|
 
 <!-- provide a way to contact you -->
 ## Maintainers
