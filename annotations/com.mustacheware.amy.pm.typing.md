@@ -5,7 +5,7 @@
 > ### com.mustacheware.amy.pm.typing
 
 <!-- provide a description of what your annotation represents -->
-The Typing Presence annotation specifies when a user has started or stopped typing something in a private messaging session.
+The Typing Presence annotation specifies when the posting user has started or stopped typing something in a private messaging session.
 
 Accepting or emitting this annotation is entirely optional.
 
