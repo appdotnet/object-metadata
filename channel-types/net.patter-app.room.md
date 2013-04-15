@@ -21,14 +21,14 @@ Patter rooms usually have editable permissions. But some may have immutable read
 Most messages have text with optional annotations. Clients should render the text of such messages and ignore any unknown annotations. If a post has no text (machine_only) and has no known annotations, it should be ignored.
 
 The following annotations are common in messages in Patter Rooms:
-* [net.patter-app.broadcast](/object-metadata/master/annotations/net.patter-app.broadcast) is used by some clients to indicate messages which have been copied into a post. Clients may indicate these messages visually and provide a way to open the post. The post itself should contain a [net.app.core.cross-post](/object-metadata/master/annotations/net.app.core.cross-post) annotation indicating the Patter Room URL (see below) which the broadcast post came from.
+* [net.patter-app.broadcast](/object-metadata/master/annotations/net.patter-app.broadcast) is used by some clients to indicate messages which have been copied into a post. Clients may indicate these messages visually and provide a way to open the post. The post itself should contain a [net.app.core.crosspost](/object-metadata/master/annotations/net.app.core.crosspost) annotation indicating the Patter Room URL (see below) which the broadcast post came from.
 * [net.app.core.oembed](/object-metadata/master/annotations/net.app.core.oembed) can be used to embed images into the chat room. How these are displayed is up to the client.
 
 Patter rooms have a unique canonical URL:
 
 http://patter-app.net/room.html?channel=CHANNELID
 
-This URL should be used when creating a broadcast post with the net.app.core.cross-post annotation (above). Users may also use the URL by hand to invite others to a public room. When encountering such a URL, clients may wish to parse the URL and use a native implementation of Patter rather than treating it as a normal link.
+This URL should be used when creating a broadcast post with the net.app.core.crosspost annotation (above). Users may also use the URL by hand to invite others to a public room. When encountering such a URL, clients may wish to parse the URL and use a native implementation of Patter rather than treating it as a normal link.
 
 <!-- provide a way to contact you -->
 ## Maintainers
