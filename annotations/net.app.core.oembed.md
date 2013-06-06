@@ -63,6 +63,29 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 }
 ~~~
 
+### HTML5 Video
+
+~~~ js
+{
+    "type": "net.app.core.oembed",
+    "value": {
+        "version": "1.0",
+        "type": "html5video",
+        "provider_name": "Video.js",
+        "provider_url": "http://www.videojs.com",
+        "width": 970,
+        "height": 404,
+        "title": "Disney Nature's Oceans",
+        "author_name": "Disney",
+        "author_url": "http://nature.disney.com/oceans",
+        "url": "http://vjs.zencdn.net/v/oceans.mp4",
+        "url_alternate": "http://vjs.zencdn.net/v/oceans.webm",
+        "poster_url": "http://www.videojs.com/img/poster.jpg",
+    }
+
+}
+~~~
+
 ### Rich
 
 ~~~ js
@@ -95,12 +118,12 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 
 | Field | Required? | Type | Description |
 | ----- | --------- | ---- | ----------- |
-| `type` | Required  | string | `photo`, `video`, or `rich` corresponding to the oEmbed type. |
+| `type` | Required  | string | `photo`, `video`, `html5video`, or `rich` corresponding to the oEmbed type. |
 | `version` | Required | string | Must be `1.0`. |
 | `width` | Required | integer | The width in pixels needed to display the embeddable content. |
 | `height` | Required | integer | The height in pixels needed to display the embeddable content. |
-| `url` | Required if `type="photo"` | string | The source URL for the image. |
-| `html` | Required if `type="video"` or `type="rich"` | string | The HTML to display the rich or video content. It should have no margins or padding. App.net does <strong>no validation</strong> of of this field. Please program defensively. You may wish to load this in an off-domain iframe to avoid XSS vulnerabilities. |
+| `url` | Required if `type="photo"` or `type="html5video"` | string | The source URL for the image or video. |
+| `html` | Required if `type="video"` or `type="rich"` | string | The HTML to display the rich or video content. It should have no margins or padding. App.net does <strong>no validation</strong> of this field. Please program defensively. You may wish to load this in an off-domain iframe to avoid XSS vulnerabilities. |
 | `embeddable_url` | Optional (but recommended) | string | A URL that can be given to an oEmbed provider to recreate the oEmbed data contained in this annotation. This is useful so other clients can get updated information or retrieve a different sized embedding through an oEmbed endpoint. |
 | `title` | Optional | string | A title for this embedded content. |
 | `author_name` | Optional | string | The author of this embedded content. |
@@ -108,11 +131,13 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 | `provider_name` | Optional | string | The service that provides this embedded content. |
 | `provider_url` | Optional | string | The URL for the service that provides this embedded content. |
 | `cache_age` | Optional | integer | How long (in seconds) should clients cache the embedded content. |
+| `url_alternate` | Optional | string | An alternate video source URL for an `html5video` (for providing multiple video formats). |
+| `poster_url` | Optional | string | A URL to a poster image for an `html5video`. |
 | `thumbnail_url` | Optional | string | A URL to an image that represents this resource. If this parameter is specified, `thumbnail_height` and `thumbnail_width` must also be present. |
 | `thumbnail_height` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_url` and `thumbnail_width` must also be present. |
 | `thumbnail_width` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_height` and `thumbnail_url` must also be present. |
 
-**`url`, `thumbnail_url`, and `embeddable_url` are processed for [App.net URI templates](http://developers.app.net/docs/meta/entities/#uri-templates) by default. You can turn this behavior off by passing `"process_template": false` as an extra attribute.**
+**`url`, `url_alternate`, `poster_url`, `thumbnail_url`, and `embeddable_url` are processed for [App.net URI templates](http://developers.app.net/docs/meta/entities/#uri-templates) by default. You can turn this behavior off by passing `"process_template": false` as an extra attribute.**
 
 <!-- provide a way to contact you -->
 ## Maintainers
