@@ -112,6 +112,8 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 | `thumbnail_height` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_url` and `thumbnail_width` must also be present. |
 | `thumbnail_width` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_height` and `thumbnail_url` must also be present. |
 
+**`url`, `thumbnail_url`, and `embeddable_url` are processed for [App.net URI templates](http://developers.app.net/docs/meta/entities/#uri-templates) by default. You can turn this behavior off by passing `"process_template": false` as an extra attribute.**
+
 <!-- provide a way to contact you -->
 ## Maintainers
 * [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))

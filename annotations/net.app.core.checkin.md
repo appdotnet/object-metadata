@@ -15,11 +15,9 @@ Indicates that a user has "checked in" to a Place as part of creating a resource
 {
     "type": "net.app.core.checkin",
     "value": {
-        "+net.app.core.place": [
-            {
-                "factual_id": "db3808e0-ea21-012e-ba1b-002590044566"
-            }
-        ]
+        "+net.app.core.place": {
+            "factual_id": "db3808e0-ea21-012e-ba1b-002590044566"
+        }
     }
 }
 ~~~

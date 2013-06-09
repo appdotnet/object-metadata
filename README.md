@@ -24,7 +24,7 @@ Anyone can issue a pull request for changes to any entry. However, all requests 
 
 ### Collaborating
 
-One of our goals for creating this repository is to foster more developer collaboration. We hope developers make extensive use of the [object metadata issue tracker](object-metadata/issues) for this purpose. The issue tracker is also a good place to discuss how we can make this documentation process better!
+One of our goals for creating this repository is to foster more developer collaboration. We hope developers make extensive use of the [object metadata issue tracker](https://github.com/appdotnet/object-metadata/issues) for this purpose. The issue tracker is also a good place to discuss how we can make this documentation process better!
 
 ### Your host
 
