@@ -139,7 +139,7 @@ For private content, we return a short-lived URL in the `url` field and a `url_e
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* Mark Thurman ([@mthurman](https://alpha.app.net/mthurman), [mthurman@app.net](mailto:mthurman@app.net))
 
 <!-- provide references to compatible apps / service -->
 ## Used by

@@ -78,8 +78,8 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
         "author_name": "Disney",
         "author_url": "http://nature.disney.com/oceans",
         "sources": [
-            {"name": "video/mp4", "url": "http://vjs.zencdn.net/v/oceans.mp4"},
-            {"name": "video/webm", "url": "http://vjs.zencdn.net/v/oceans.webm"}
+            {"type": "video/mp4", "url": "http://vjs.zencdn.net/v/oceans.mp4"},
+            {"type": "video/webm", "url": "http://vjs.zencdn.net/v/oceans.webm"}
         ]
         "poster_url": "http://www.videojs.com/img/poster.jpg",
     }
@@ -124,7 +124,7 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 | `height` | Required | integer | The height in pixels needed to display the embeddable content. |
 | `url` | Required if `type="photo"` | string | The source URL for the image. |
 | `html` | Required if `type="video"` or `type="rich"` | string | The HTML to display the rich or video content. It should have no margins or padding. App.net does <strong>no validation</strong> of this field. Please program defensively. You may wish to load this in an off-domain iframe to avoid XSS vulnerabilities. |
-| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{name, url}` entries to use in the `source` tags. Though not required, we recommend `name` be the MIME type of the file. |
+| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{type, url}` entries to use in the `source` tags. Though not required, we recommend `type` be the MIME type of the file. |
 | `embeddable_url` | Optional (but recommended) | string | A URL that can be given to an oEmbed provider to recreate the oEmbed data contained in this annotation. This is useful so other clients can get updated information or retrieve a different sized embedding through an oEmbed endpoint. |
 | `title` | Optional | string | A title for this embedded content. |
 | `author_name` | Optional | string | The author of this embedded content. |
@@ -141,7 +141,7 @@ We highly recommend providing the ```embeddable_url``` attribute so other client
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* Mark Thurman ([@mthurman](https://alpha.app.net/mthurman), [mthurman@app.net](mailto:mthurman@app.net))
 
 <!-- provide references to compatible apps / service -->
 ## Used by
