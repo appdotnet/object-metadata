@@ -100,7 +100,7 @@ This format can only be used with the `net.app.core.oembed` annotation, not with
 
 ~~~ js
 {
-    "type": "com.example.test",
+    "type": "net.app.core.oembed",
     "value": {
         "file_token_read": "new_file_token",
         "file_id": "1",
@@ -119,6 +119,8 @@ In addition to the standard oembed fields, App.net will also add fields for `fil
 If the OEmbed data is public, `url` will be a permanent url which always redirects to the image. In this case, an additional field `url_immediate` will provide the current value for the file so you can avoid the redirect. (This expires at `url_immediate_expires`). `thumbnail_url` and `thumbnail_large_url` (described below) also use this same url patterns.
 
 We generate `thumbnail_url` from the [`image_thumb_200s` derived file](http://developers.app.net/docs/resources/file/#derived-files). If the image is smaller than 200x200, then we use the image as its own thumbnail. If we have a larger derived file (`image_thumb_960r`), then we will also include `thumbnail_large_url`, `thumbnail_large_width`, `thumbnail_large_height`, etc that correspond to the larger thumbnail.
+
+If the file has a [`net.app.core.oembed.metadata` annotation](../annotations/net.app.core.oembed.metadata.md), it will be used to generate the OEmbed output. We replace `poster_key`, `thumbnail_key`, and `url_key` fields with `poster_url`, `thumbnail_url`, and `url` fields containing links to the corresponding derived files. If a `_key` field is provided but left empty, we do the replacement with a link to the root file.
 
 #### URL Lifetimes
 
@@ -149,3 +151,4 @@ For private content, we return a short-lived URL in the `url` field and a `url_e
 * [+net.app.core.file_list](+net.app.core.file_list.md)
 * [net.app.core.attachments](../annotations/net.app.core.attachments.md)
 * [net.app.core.oembed](../annotations/net.app.core.oembed.md)
+* [net.app.core.oembed.metadata](../annotations/net.app.core.oembed.metadata.md)
