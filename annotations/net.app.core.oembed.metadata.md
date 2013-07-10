@@ -70,7 +70,7 @@ The `html5video` type is the main use case for this annotation. A video and any 
 | `height` | Required | integer | The height in pixels needed to display the embeddable content. |
 | `url` | Required if `type="photo"` | string | The source URL for the image or video. |
 | `html` | Required if `type="video"` or `type="rich"` | string | The HTML to display the rich or video content. It should have no margins or padding. App.net does <strong>no validation</strong> of this field. Please program defensively. You may wish to load this in an off-domain iframe to avoid XSS vulnerabilities. |
-| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{type, url_key}` entries to use in the `source` tags. Though not required, we recommend `type` be the MIME type of the file. `url_key` must be an existing derived file key. |
+| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{type, url_key}` entries to use in the `source` tags. `type` should be a string that can be dropped into the `type' attribute of a `source` tag (e.g. `video/mp4` or `video/webm; codecs="vp8.0, vorbis"`). `url_key` must be an existing derived file key. |
 | `embeddable_url` | Optional (but recommended) | string | A URL that can be given to an oEmbed provider to recreate the oEmbed data contained in this annotation. This is useful so other clients can get updated information or retrieve a different sized embedding through an oEmbed endpoint. |
 | `title` | Optional | string | A title for this embedded content. |
 | `author_name` | Optional | string | The author of this embedded content. |
