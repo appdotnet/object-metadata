@@ -9,7 +9,7 @@ An oEmbed Metadata Annotation should only be attached to a File object. It repre
 
 Using an oEmbed Metadata Annotation can allow for oEmbed representations of photos when App.net can't automatically generate one (i.e. if format isn't `jpg`, `png`, or `gif`).
 
-The `html5video` type is the main use case for this annotation. A video and any necessary extras (multiple formats, thumbnails, etc) can now be represented by a single file with this annotation mapping out the pieces. A [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md) annotation can then generate an oEmbed representation containing all the pieces needed to construct an HTML5 Video tag.
+The `html5video` type is the main use case for this annotation. A video and any necessary extras (multiple formats, thumbnails, etc) can now be represented by a single [File](http://developers.app.net/docs/resources/file/) object and its [derived files](http://developers.app.net/docs/resources/file/#derived-files). This annotation then maps out the pieces. A [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md) annotation can then generate an oEmbed representation with all the necessary parts to construct an HTML5 Video tag.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Examples
@@ -70,7 +70,7 @@ The `html5video` type is the main use case for this annotation. A video and any 
 | `height` | Required | integer | The height in pixels needed to display the embeddable content. |
 | `url` | Required if `type="photo"` | string | The source URL for the image or video. |
 | `html` | Required if `type="video"` or `type="rich"` | string | The HTML to display the rich or video content. It should have no margins or padding. App.net does <strong>no validation</strong> of this field. Please program defensively. You may wish to load this in an off-domain iframe to avoid XSS vulnerabilities. |
-| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{type, url_key}` entries to use in the `source` tags. `type` should be a string that can be dropped into the `type' attribute of a `source` tag (e.g. `video/mp4` or `video/webm; codecs="vp8.0, vorbis"`). `url_key` must be an existing derived file key. |
+| `sources` | Required if `type="html5video"` | list | A list of up to 5 `{type, url_key}` entries to use in constructing the HTML `<source>` tags. `type` should be a string that can be dropped into the `type` attribute (e.g. `video/mp4` or `video/webm; codecs="vp8.0, vorbis"`). `url_key` must be an existing derived file key. |
 | `embeddable_url` | Optional (but recommended) | string | A URL that can be given to an oEmbed provider to recreate the oEmbed data contained in this annotation. This is useful so other clients can get updated information or retrieve a different sized embedding through an oEmbed endpoint. |
 | `title` | Optional | string | A title for this embedded content. |
 | `author_name` | Optional | string | The author of this embedded content. |
@@ -85,7 +85,7 @@ The `html5video` type is the main use case for this annotation. A video and any 
 | `thumbnail_height` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_width` and either `thumbnail_key` or `thumbnail_url` must also be present. |
 | `thumbnail_width` | Optional | string | The height of the thumbnail image. If this parameter is specified, `thumbnail_height` and either `thumbnail_key` or `thumbnail_url` must also be present. |
 
-`poster_key`, `thumbnail_key`, and `url_key` fields are validated as an existing derived key on the annotation's host file. When an oEmbed representation of that file is requested by a [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md) replacement annotation, these fields are replaced by `poster_url`, `thumbnail_url`, and `url` respectively, and populated with links to the corresponding derived files. Explicitly specifying an empty string for one of these `_key` fields will cause its replacement to be populated with a link to the root file.
+`poster_key`, `thumbnail_key`, and `url_key` fields are validated as an existing [derived key](http://developers.app.net/docs/resources/file/#derived-files) on the annotation's host file. When an oEmbed representation of that file is requested by a [+net.app.core.file](../annotation-replacement-values/+net.app.core.file.md) replacement annotation, these fields are replaced by `poster_url`, `thumbnail_url`, and `url` fields respectively, and populated with links to the corresponding derived files. Specifying one of these `_key` fields as an empty string will cause its replacement will be populated with a link to the root file.
 
 **`url`, `poster_url`, `thumbnail_url`, and `embeddable_url` are processed for [App.net URI templates](http://developers.app.net/docs/meta/entities/#uri-templates) by default. You can turn this behavior off by passing `"process_template": false` as an extra attribute.**
 
