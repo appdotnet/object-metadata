@@ -78,7 +78,6 @@ The `html5video` type is the main use case for this annotation. A video and any 
 | `provider_name` | Optional | string | The service that provides this embedded content. |
 | `provider_url` | Optional | string | The URL for the service that provides this embedded content. |
 | `cache_age` | Optional | integer | How long (in seconds) should clients cache the embedded content. |
-| `url_alternate` | Optional | string | An alternate video source URL for an html5video (for providing multiple video formats). |
 | `poster_key` | Optional | string | A derived file key used to populate the `poster_url` field. This field must be an existing derived file key. |
 | `thumbnail_key` | Optional | string | A derived file key used to populate the `thumbnail_url` field. If this parameter is specified, `thumbnail_height` and `thumbnail_width` must also be present and `thumbnail_url` must not be. This field must be an existing derived file key. |
 | `thumbnail_url` | Optional | string | A URL to an image that represents this resource. If this parameter is specified, `thumbnail_height` and `thumbnail_width` must also be present and `thumbnail_key` must not be. |
