@@ -5,7 +5,9 @@
 > ### net.app.core.language
 
 <!-- provide a description of what your annotation represents -->
-The language annotation allows a User to indicate what language this post was written in.
+The language annotation allows a User to indicate what language this post or message was written in. We suggest you add this annotation to a post or message if you have an explicit indication from the user of which language it was written in, or a reasonable estimate, e.g., the locale of the keyboard used to compose the post, metadata from an external feed, etc.
+
+If your application is **consuming** this annotation, we recommend that you fall back to the `locale` field on the User object which created the object in order to determine the effective language of a post.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -28,10 +30,13 @@ The language annotation allows a User to indicate what language this post was wr
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* App.net core team
 
 <!-- provide references to compatible apps / service -->
 ## Used by
+
+* Riposte
+* hAppy
 
 <!-- provide references to related annotations -->
 ## Related annotations
