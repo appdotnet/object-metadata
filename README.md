@@ -28,4 +28,4 @@ One of our goals for creating this repository is to foster more developer collab
 
 ### Your host
 
-This repository is maintained by [@orian](https://alpha.app.net/orian), App.net's Developer Advocate.
+This repository is maintained by the App.net core team. You can find us in the [App.net Developer Patter Room](http://patter-app.net/room.html?channel=1383).

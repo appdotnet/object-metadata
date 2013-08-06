@@ -13,7 +13,7 @@ In addition, this channel type differs from others in that it is designed to pro
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* App.net core team
 
 <!-- provide references to compatible apps / service -->
 ## Used by 

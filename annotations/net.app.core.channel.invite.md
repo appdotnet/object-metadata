@@ -30,7 +30,7 @@ Channel creators should consider providing [fallback url annotations](net.app.co
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* App.net core team
 
 <!-- provide references to related annotations -->
 ## Related annotations

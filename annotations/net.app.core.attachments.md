@@ -54,7 +54,7 @@ Attach App.net [Files](http://developers.app.net/docs/resources/file/) to this r
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* App.net core team
 
 <!-- provide references to compatible apps / service -->
 ## Used by

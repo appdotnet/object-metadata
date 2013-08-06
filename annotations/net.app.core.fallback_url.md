@@ -30,7 +30,7 @@ One use case for this annotation is as a [Channel](http://developers.app.net/doc
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* [Orian Marx](http://orianmarx.com) ([@orian](https://alpha.app.net/orian), [orian@app.net](mailto:orian@app.net))
+* App.net core team
 
 <!-- provide references to related annotations -->
 ## Related annotations
