@@ -52,7 +52,7 @@ This dynamically inserts information about an App.net [User](http://developers.a
     "value": {
         "+net.app.core.user": {
             "user_id": "1",
-            "format": "basic",
+            "format": "full",
         },
         "other_values": "are preserved"
     }
