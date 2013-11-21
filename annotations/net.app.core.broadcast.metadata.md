@@ -41,4 +41,3 @@ The Broadcast Metadata annotation describes an App.net broadcast channel. This a
 
 <!-- provide references to related annotations -->
 ## Related annotations
-* [+net.app.core.broadcast.icon](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.broadcast.icon.md)
