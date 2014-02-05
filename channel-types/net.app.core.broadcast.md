@@ -5,7 +5,7 @@
 > ### net.app.core.broadcast
 
 <!-- provide a description for this channel type's behavior -->
-Broadcast channels are mean't for low-volume, high-value updates that users explicitly opt-in to.
+Broadcast channels are meant for low-volume, high-value updates that users explicitly opt-in to.
 
 - Broadcast channels must not have multiple writers. If you'd like multiple people to be able to publish to a Broadcast channel, you must make them all editors.
 - Broadcast channels can have an unlimited number of readers explicitly specified.
