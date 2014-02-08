@@ -8,6 +8,7 @@
 Broadcast channels are meant for low-volume, high-value updates that users explicitly opt-in to.
 
 - Broadcast channels must not have multiple writers. If you'd like multiple people to be able to publish to a Broadcast channel, you must make them all editors.
+- Broadcast channels must have a mutable ACL for both editors and writers.
 - Broadcast channels can have an unlimited number of readers explicitly specified.
 - You *cannot* auto-subscribe anyone to Broadcast channels. They are opt-in.
 
