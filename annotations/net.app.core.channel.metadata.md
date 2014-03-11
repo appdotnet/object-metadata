@@ -1,5 +1,5 @@
 <!-- give your annotation a title -->
-### Broadcast Metadata
+### Channel Metadata
 
 <!-- specify the "type" for your annotation -->
 > ### net.app.core.channel.metadata
