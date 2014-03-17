@@ -122,6 +122,40 @@ We generate `thumbnail_url` from the [`image_thumb_200s` derived file](http://de
 
 If the file has a [`net.app.core.oembed.metadata` annotation](../annotations/net.app.core.oembed.metadata.md), it will be used to generate the OEmbed output. We replace `poster_key`, `thumbnail_key`, and `url_key` fields with `poster_url`, `thumbnail_url`, and `url` fields containing links to the corresponding derived files. If a `_key` field is provided but left empty, we do the replacement with a link to the root file.
 
+If you provide `provider_name`, `provider_url`, or `embeddable_url` along with the replacement value, your value will override the App.net provided key. No other OEmbed keys can be overridden. For example:
+
+~~~ js
+{
+    "type": "net.app.core.oembed",
+    "value": {
+        "+net.app.core.file": {
+            "file_token": "12345abcde",
+            "format": "oembed",
+            "file_id": "1",
+        },
+        "provider_name": "My Cool App"
+    }
+}
+~~~
+
+gets translated to:
+
+~~~ js
+{
+    "type": "net.app.core.oembed",
+    "value": {
+        "file_token_read": "new_file_token",
+        "file_id": "1",
+        "url_immediate": "https://...",
+        "url_immediate_expires": "2012-01-01T01:00:00Z",
+        "version": "1.0",
+        "type": "photo",
+        ...other oembed values...
+        "provider_name": "My Cool App" # not App.net here, it was overridden by the user
+    }
+}
+~~~
+
 #### URL Lifetimes
 
 Note that some extra fields are returned from the API depending on whether the parent object is public or not. For content that is public, like posts, messages in public channels, annotations on user objects, etc., we include a URL in the `url` field which will redirect you to the content in question so long as it is still public; we also include `url_immediate` and `url_immediate_expires` fields if you wish to avoid the extra HTTP request. URLs returned in the `url_immediate` field are good for at least 1 hour after fetching the object from the App.net API.
