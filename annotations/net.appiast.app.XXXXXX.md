@@ -7,7 +7,7 @@
 <!-- provide a description of what your annotation represents -->
 Identifies the app a post is rating. The Xs are replaced by the id of the app the post is rating.
 
-To ensure uniqueness of app ids, they have prefixes that identify them as belonging to a specific app store or other source of apps. Ids from the Apple Mac, iPhone and iPad app stores are prefix with an "a". So a post rating the app "Appiast" which has the id 868774614 will have an annotation with the name "net.appiast.app.a868774614"
+To ensure uniqueness of app ids, they have prefixes that identify them as belonging to a specific app store or other source of apps. Ids from the Apple Mac, iPhone and iPad app stores are prefixed with an "a". So a post rating the app "Appiast" which has the id 868774614 will have an annotation with the name "net.appiast.app.a868774614"
 
 This annotation is used to find all app ratings for a specific app.
 
