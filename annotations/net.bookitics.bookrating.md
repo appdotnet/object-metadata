@@ -7,11 +7,11 @@
 <!-- provide a description of what your annotation represents -->
 Identifies a post as a book rating and contains additional book rating data.
 
-In addition to the annotation described here, book rating posts may contain an attached book cover image which is provided via the standard App.net mechanism using a net.app.core.oembed. 
+In addition to the annotation described here, book rating posts may contain an attached book cover image which is provided via the standard App.net mechanism using a net.app.core.oembed.
 
 Also the standard hashtag mechanism is used to tag book ratings in order to define to which genres the rated books belongs.
 
-As it is currently not possible to search for posts containing specific annotation values, the post text contains the author and title of the book. Book ratings created based on another book rating also contain the book id as a hashtag #bid&lt;book_id&gt;, which allows to find other posts rating the same book.
+As it is currently not possible to search for posts containing specific annotation values, the post text contains the author and title of the book. Book ratings created based on another book rating also have a [net.bookitics.book.XXXXXX](net.bookitics.book.XXXXXX.md) annotation.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -44,12 +44,13 @@ As it is currently not possible to search for posts containing specific annotati
 
 <!-- provide a way to contact you -->
 ## Maintainers
-* Robert Beeger [@robertbeeger](https://alpha.app.net/robertbeeger), [robert@beeger.net](mailto:robert@beeger.net) 
+* Robert Beeger [@robertbeeger](https://alpha.app.net/robertbeeger), [robert@beeger.net](mailto:robert@beeger.net)
 
 <!-- provide references to compatible apps / service -->
-## Used by 
+## Used by
 * [Bookitics](http://bookitics.net)
 
 <!-- provide references to related annotations -->
 ## Related annotations
-* [net.app.core.oembed.md](https://github.com/appdotnet/object-metadata/blob/master/annotation/net.app.core.oembed.md)
+* [net.bookitics.book.XXXXXX](net.bookitics.book.XXXXXX.md)
+* [net.app.core.oembed.md](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.oembed.md)
