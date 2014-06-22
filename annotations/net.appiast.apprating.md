@@ -7,17 +7,17 @@
 <!-- provide a description of what your annotation represents -->
 Identifies a post as an app rating and contains additional app rating data.
 
-In addition to the annotation described here, app rating posts contain an attached app icon image which is provided via the standard App.net mechanism using a net.app.core.oembed.
+In addition to the annotation described here, app rating posts contain an attached app icon image which is provided via the standard App.net mechanism using a net.app.core.attachments for Appiast 1.1.0 and up or a net.app.core.oembed for Appiast 1.0.0.
+
+Posts created by Appiast 1.0.0 contain an additional net.appiast.app.XXXX annotation that was used to find ratings for the same app. This annotation isn't used anymore as it created a new annotation for each app which could eventually have negative effects on the performance of app.net. Instead of this annotation Appiast 1.1.0 and newer use the iTunes App Store URL to which the app name in an Appiast post links to find ratings of the same app.
 
 Also the standard hashtag mechanism is used to tag app ratings in order to define what kind of app the rated app is.
 
 The post text contains
   * the name of the app which is also a link to the app in the app store
-  * As much of the app review as fits into the post
+  * As much of the first paragraph of the app review as fits into the post
   * Five stars that reflect the rating of the app by being filled or empty (e.g. ★★★☆☆) which is also a link to appiast.net showing the full text of the review
   * The tags given by the user
-
-Each app rating post also has a [net.appiast.app.XXXXXX](net.appiast.app.XXXXXX.md) annotation.
 
 <!-- provide at least one example of what your annotation might look like in the wild -->
 ## Example
@@ -59,5 +59,5 @@ Each app rating post also has a [net.appiast.app.XXXXXX](net.appiast.app.XXXXXX.
 
 <!-- provide references to related annotations -->
 ## Related annotations
-* [net.appiast.app.XXXXXX](net.appiast.app.XXXXXX.md)
-* [net.app.core.oembed.md](https://github.com/appdotnet/object-metadata/blob/master/annotations/net.app.core.oembed.md)
+* [net.app.core.oembed.md](net.app.core.oembed.md)
+* [net.app.core.attachments.md](net.app.core.attachments.md)
